@@ -1,3 +1,4 @@
+import { ContactForm } from "@/components/copper/contact-form";
 import { Hero } from "@/components/copper/hero";
 import { PlusPricing } from "@/components/copper/plus-pricing";
 import { PrivacySummary } from "@/components/copper/privacy-summary";
@@ -19,6 +20,7 @@ export default function Home() {
         <Showcase products={products} />
         <PlusPricing plans={getPlans()} />
         <PrivacySummary privacy={getPrivacySummary()} />
+        <ContactForm />
       </main>
       <SiteFooter />
     </>

@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { href: "#products", label: "Products" },
   { href: "#plus", label: "Copper Plus" },
   { href: "#privacy", label: "Privacy" },
+  { href: "#contact", label: "Contact" },
 ];
 
 // Sticky and slim. On phones the links sit on a second row under the logo;

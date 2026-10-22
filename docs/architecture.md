@@ -86,3 +86,22 @@ When a module changes how the app fits together, add a section here:
 **Risks and open questions:** cost, privacy, accuracy or safety risks, and how
 you handle them.
 ```
+
+## Extension: contact form (prototype)
+
+| Piece | Where | What it does |
+|---|---|---|
+| Component | `components/copper/contact-form.tsx` | The `#contact` section on the home page: name, email, topic and message |
+| Header | `components/copper/site-header.tsx` | A "Contact" link to `#contact` |
+| Tests | `tests/contact-form.test.tsx` | Fields, validation, toast and home page wiring |
+
+**Data flow:** the user fills in the form → zod checks it in the browser → a valid
+form clears and shows a `sonner` toast ("Copper State Labs has received your
+input and will get in touch soon."). Nothing is sent or stored.
+
+**Decisions and trade-offs:** a front-end-only prototype, so there is no
+server action, table or email service yet. The site stays a single page.
+
+**Risks and open questions:** the toast says the message was received, but it
+wasn't. Before launch, add real delivery (a database table or email) and
+spam protection.
